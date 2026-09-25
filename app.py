@@ -55,7 +55,7 @@ if st.button("Generate Summary", type="primary"):
                 {notes_text[:12000]}
                 """
                 response = client.models.generate_content(
-                    model="gemini-2.5-flash",
+                    model="gemini-3.8-flash",
                     contents=prompt
                 )
                 st.markdown("### 📝 Generated Summary")
