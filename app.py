@@ -81,13 +81,7 @@ generate_btn = st.button("Generate Summary", type="primary")
 
 if generate_btn:
 
-    if not api_key:
-        st.error(
-            "GOOGLE_API_KEY environment variable is missing. "
-            "Please add it in your Render Service Dashboard under Environment Variables."
-        )
-
-    elif not notes_text.strip():
+    if not notes_text.strip():
         st.warning("Please provide study text or upload a PDF first.")
 
     else:
@@ -114,9 +108,9 @@ STUDY MATERIAL:
 
                 # Gemini Model Fallback
                 models_to_try = [
-                    "gemini-2.5-flash",
-                    "gemini-1.5-flash",
-                    "gemini-2.0-flash"
+                    "gemini-3.8-flash",
+                    "gemini-3.7-flash",
+                    "gemini-3.5-flash"
                 ]
 
                 response = None
